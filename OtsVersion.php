@@ -9,9 +9,9 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Ots
  *
- * @method V20160620\OtsApiResolver v20160620()
+ * @method static V20160620\OtsApiResolver v20160620()
  */
-class Ots
+class OtsVersion
 {
     use VersionResolverTrait;
 }
