@@ -2,7 +2,30 @@
 
 namespace AlibabaCloud\Ots\V20160620;
 
+use AlibabaCloud\ApiResolverTrait;
 use AlibabaCloud\Rpc;
+
+/**
+ * Resolve Api based on the method name.
+ *
+ * @method UnbindInstance2Vpc unbindInstance2Vpc(array $options = [])
+ * @method UpdateInstance updateInstance(array $options = [])
+ * @method InsertTags insertTags(array $options = [])
+ * @method ListClusterType listClusterType(array $options = [])
+ * @method ListInstance listInstance(array $options = [])
+ * @method ListTags listTags(array $options = [])
+ * @method ListVpcInfoByInstance listVpcInfoByInstance(array $options = [])
+ * @method ListVpcInfoByVpc listVpcInfoByVpc(array $options = [])
+ * @method DeleteInstance deleteInstance(array $options = [])
+ * @method DeleteTags deleteTags(array $options = [])
+ * @method GetInstance getInstance(array $options = [])
+ * @method InsertInstance insertInstance(array $options = [])
+ * @method BindInstance2Vpc bindInstance2Vpc(array $options = [])
+ */
+class OtsApiResolver
+{
+    use ApiResolverTrait;
+}
 
 class V20160620Rpc extends Rpc
 {
@@ -98,16 +121,16 @@ class InsertTags extends V20160620Rpc
     }
 
     /**
-     * @param array $value
+     * @param array $tagInfo
      *
      * @return $this
      */
-    public function withTagInfo(array $value)
+    public function withTagInfo(array $tagInfo)
     {
-        $this->data['TagInfo'] = $value;
-        foreach ($value as $i => $iValue) {
-            $this->options['query']['TagInfo.' . ($i + 1) . '.TagValue'] = $value[$i]['TagValue'];
-            $this->options['query']['TagInfo.' . ($i + 1) . '.TagKey'] = $value[$i]['TagKey'];
+        $this->data['TagInfo'] = $tagInfo;
+        foreach ($tagInfo as $depth1 => $depth1Value) {
+            $this->options['query']['TagInfo.' . ($depth1 + 1) . '.TagValue'] = $depth1Value['TagValue'];
+            $this->options['query']['TagInfo.' . ($depth1 + 1) . '.TagKey'] = $depth1Value['TagKey'];
         }
 
         return $this;
@@ -167,16 +190,16 @@ class ListInstance extends V20160620Rpc
     }
 
     /**
-     * @param array $value
+     * @param array $tagInfo
      *
      * @return $this
      */
-    public function withTagInfo(array $value)
+    public function withTagInfo(array $tagInfo)
     {
-        $this->data['TagInfo'] = $value;
-        foreach ($value as $i => $iValue) {
-            $this->options['query']['TagInfo.' . ($i + 1) . '.TagValue'] = $value[$i]['TagValue'];
-            $this->options['query']['TagInfo.' . ($i + 1) . '.TagKey'] = $value[$i]['TagKey'];
+        $this->data['TagInfo'] = $tagInfo;
+        foreach ($tagInfo as $depth1 => $depth1Value) {
+            $this->options['query']['TagInfo.' . ($depth1 + 1) . '.TagValue'] = $depth1Value['TagValue'];
+            $this->options['query']['TagInfo.' . ($depth1 + 1) . '.TagKey'] = $depth1Value['TagKey'];
         }
 
         return $this;
@@ -212,16 +235,16 @@ class ListTags extends V20160620Rpc
     }
 
     /**
-     * @param array $value
+     * @param array $tagInfo
      *
      * @return $this
      */
-    public function withTagInfo(array $value)
+    public function withTagInfo(array $tagInfo)
     {
-        $this->data['TagInfo'] = $value;
-        foreach ($value as $i => $iValue) {
-            $this->options['query']['TagInfo.' . ($i + 1) . '.TagValue'] = $value[$i]['TagValue'];
-            $this->options['query']['TagInfo.' . ($i + 1) . '.TagKey'] = $value[$i]['TagKey'];
+        $this->data['TagInfo'] = $tagInfo;
+        foreach ($tagInfo as $depth1 => $depth1Value) {
+            $this->options['query']['TagInfo.' . ($depth1 + 1) . '.TagValue'] = $depth1Value['TagValue'];
+            $this->options['query']['TagInfo.' . ($depth1 + 1) . '.TagKey'] = $depth1Value['TagKey'];
         }
 
         return $this;
@@ -289,16 +312,16 @@ class ListVpcInfoByVpc extends V20160620Rpc
     }
 
     /**
-     * @param array $value
+     * @param array $tagInfo
      *
      * @return $this
      */
-    public function withTagInfo(array $value)
+    public function withTagInfo(array $tagInfo)
     {
-        $this->data['TagInfo'] = $value;
-        foreach ($value as $i => $iValue) {
-            $this->options['query']['TagInfo.' . ($i + 1) . '.TagValue'] = $value[$i]['TagValue'];
-            $this->options['query']['TagInfo.' . ($i + 1) . '.TagKey'] = $value[$i]['TagKey'];
+        $this->data['TagInfo'] = $tagInfo;
+        foreach ($tagInfo as $depth1 => $depth1Value) {
+            $this->options['query']['TagInfo.' . ($depth1 + 1) . '.TagValue'] = $depth1Value['TagValue'];
+            $this->options['query']['TagInfo.' . ($depth1 + 1) . '.TagKey'] = $depth1Value['TagKey'];
         }
 
         return $this;
@@ -354,16 +377,16 @@ class DeleteTags extends V20160620Rpc
     }
 
     /**
-     * @param array $value
+     * @param array $tagInfo
      *
      * @return $this
      */
-    public function withTagInfo(array $value)
+    public function withTagInfo(array $tagInfo)
     {
-        $this->data['TagInfo'] = $value;
-        foreach ($value as $i => $iValue) {
-            $this->options['query']['TagInfo.' . ($i + 1) . '.TagValue'] = $value[$i]['TagValue'];
-            $this->options['query']['TagInfo.' . ($i + 1) . '.TagKey'] = $value[$i]['TagKey'];
+        $this->data['TagInfo'] = $tagInfo;
+        foreach ($tagInfo as $depth1 => $depth1Value) {
+            $this->options['query']['TagInfo.' . ($depth1 + 1) . '.TagValue'] = $depth1Value['TagValue'];
+            $this->options['query']['TagInfo.' . ($depth1 + 1) . '.TagKey'] = $depth1Value['TagKey'];
         }
 
         return $this;
@@ -427,16 +450,16 @@ class InsertInstance extends V20160620Rpc
     }
 
     /**
-     * @param array $value
+     * @param array $tagInfo
      *
      * @return $this
      */
-    public function withTagInfo(array $value)
+    public function withTagInfo(array $tagInfo)
     {
-        $this->data['TagInfo'] = $value;
-        foreach ($value as $i => $iValue) {
-            $this->options['query']['TagInfo.' . ($i + 1) . '.TagValue'] = $value[$i]['TagValue'];
-            $this->options['query']['TagInfo.' . ($i + 1) . '.TagKey'] = $value[$i]['TagKey'];
+        $this->data['TagInfo'] = $tagInfo;
+        foreach ($tagInfo as $depth1 => $depth1Value) {
+            $this->options['query']['TagInfo.' . ($depth1 + 1) . '.TagValue'] = $depth1Value['TagValue'];
+            $this->options['query']['TagInfo.' . ($depth1 + 1) . '.TagKey'] = $depth1Value['TagKey'];
         }
 
         return $this;
