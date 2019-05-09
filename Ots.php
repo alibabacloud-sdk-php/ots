@@ -5,8 +5,8 @@ namespace AlibabaCloud\Ots;
 use AlibabaCloud\Client\Resolver\VersionResolver;
 
 /**
- * @deprecated
+ * @method static V20160620\OtsApiResolver v20160620()
  */
-class OtsVersion extends VersionResolver
+class Ots extends VersionResolver
 {
 }
